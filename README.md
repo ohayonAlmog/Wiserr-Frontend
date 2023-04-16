@@ -1,8 +1,6 @@
 # Wiserr-Frontend
  Wiserr (Inspired by fiverr) - Vuex
 
-Github pages - https://ohayonalmog.github.io/Wiserr-Frontend/
-
 ![וויזר1](https://user-images.githubusercontent.com/130902789/232314023-eb527b2d-8f22-4aa1-9353-2c0ff6eb0179.jpg)
 _______________________________________________________________
 
