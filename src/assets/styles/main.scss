@@ -1,0 +1,40 @@
+// Setup
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+@import "setup/typography";
+
+// Basics
+@import "basics/helpers";
+@import "basics/layout";
+@import "basics/base";
+@import "basics/links";
+@import "basics/forms";
+
+// Components
+@import "cmps/AppFooter";
+@import "cmps/AppHeader";
+@import "cmps/UserMsg";
+@import "cmps/ReviewList";
+@import "cmps/GigList";
+@import "cmps/GigFilter";
+@import "cmps/GigPreview";
+@import "cmps/FilterBox";
+@import "cmps/GigSort";
+@import "cmps/SellerDetails";
+@import "cmps/ReviewDetails";
+@import "cmps/ReviewPreview";
+@import "cmps/Login";
+@import "cmps/BuyerOrders";
+@import "cmps/OrderPreview";
+@import "cmps/GigSellerPreview"; /*NEW*/
+@import "cmps/ImgUpload"; /*NEW*/
+
+// Views
+@import "views/GigDetails";
+@import "views/GigEdit";
+@import "views/GigPayment";
+@import "views/Home";
+@import "views/SellerRegister";
+@import "views/SellerProfile";
+@import "views/SellerOrders";

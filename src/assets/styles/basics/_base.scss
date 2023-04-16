@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+button {
+    border: 0;
+    background-color: $clr4;
+    color: $clr6;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 100%;
+    text-align: center;
+    
+    &:hover {
+        background-color: $clr9;
+    }
+}
+
+html {
+    font-family: Macan-Regular;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: Macan-bold;
+    margin: 0;
+    color: $titleGrayClr;
+}
+
+h3, h4, h5, h6 {
+    line-height: 130%;
+    color: $titleGrayClr;
+}
+
+p {
+    color: $textGrayClr;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    list-style-image: none;
+}

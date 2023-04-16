@@ -1,0 +1,170 @@
+.review-preview {
+    margin-block-end: 24px;
+
+    .header {
+        justify-content: space-between;
+        text-align: left;
+
+        h2 {
+            margin-bottom: 16px;
+        }
+
+        .rating-average {
+            border: none;
+            height: 16px;
+            color: $clr2;
+            margin-top: 4px;
+            font-family: Macan-bold;
+        }
+    }
+
+    .titles {
+
+        h3 {
+            margin: 0;
+            padding-right: 8px;
+        }
+
+        .stars {
+            margin: 0;
+            height: 18px;
+
+            li {
+                padding-right: 3px;
+                margin-top: 4px;
+                height: fit-content;
+                block-size: fit-content;
+                fill: $clr2;
+                font-size: 1.125rem;
+            }
+        }
+    }
+
+    .stars-counters {
+        min-width: 50%;
+
+        .ranges {
+            
+            li {
+                padding: 0;
+
+                .key {
+                    color: $clr3;
+                    font-weight: 700;
+                    padding: em(6px, 16px);
+                    width: 25%;
+                }
+    
+                progress {
+                    margin-inline-end: 10px;
+                    margin-block-start: 8px;
+                    display: flex;
+                }
+    
+                progress[value] {
+                    appearance: none;
+                }
+
+                progress[value]::-webkit-progress-value {
+                    background-color: $clr2;
+                    border-radius: 999px;
+                }
+    
+                progress[value]::-webkit-progress-bar {
+                    background-color: $clr8;
+                    border-radius: 999px;
+                    height: 8px;
+                }
+    
+                .range-number {
+                    color: $clr3;
+                }
+            }
+        }
+    }
+
+    .secondary {
+        flex: 1;
+        padding-block-start: 2px;
+
+        h6 {
+            font-size: 1rem;
+            font-weight: 700;
+            padding-block-end: em(16px, 16px);
+            line-height: 140%;
+            color: $titleGrayClr;
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        ul > li {
+            padding-block-end: em(8px, 16px);
+            color: #95979d;
+
+            .star-container {
+                margin-left: 12px;
+                line-height: 21px;
+                color: $clr2;
+                font-weight: 700;
+
+                span {
+                    display: grid;
+                    place-content: center;
+                }
+
+                svg {
+                    fill: $clr2;
+                }
+
+                .value {
+                    padding-inline-start: em(4px, 16px);
+                    margin-block-start: em(2px, 16px);
+                }
+            }
+        }
+    }
+
+}
+
+@include for-mobile-details {
+    .review-preview {
+        display: block;
+
+        .titles {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "h3 h3"
+            "stars rateAverage";
+
+            h3 {
+                grid-area: h3;
+            }
+
+            .stars {
+                padding: 0;
+                grid-area: stars;
+            }
+
+            .rating-average {
+                grid-area: rateAverage;
+            }
+        }
+
+        .innerflex {
+            flex-direction: column;
+
+            .stars-counters {
+                padding-bottom: 18px;
+                border-bottom: 1px solid $clr8;
+            }
+
+            .secondary {
+                padding-top: 18px;
+            }
+        }
+    }
+}

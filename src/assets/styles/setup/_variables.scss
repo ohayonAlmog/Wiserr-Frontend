@@ -1,0 +1,59 @@
+// Colors
+$clr1: #545558;
+$clr2: #ffb33e;
+$clr3: #446ee7;
+$clr4: #1dbf73;
+$clr5: #dff0ea;
+$clr6: #fff;
+$clr7: #b5b6ba;
+$clr8: #e4e5e7;
+$clr9: #19a463;
+$clr10: #95979d;
+$clr11: #74767e;
+$clr12: #7A7D81;
+$clr13: #f3fdf9;
+$clr14: #fafafa;
+$clr15: #c5c6c9;
+$clr16: #c3c3c6;
+$clr17: #33323287;
+$clr18: #efeff0;
+$clr19:#00000080;
+$clr20:#f7f7f7;
+$clr21:#828385;
+$clr22:#00000046;
+$clr23: #dadbdd;
+$clr24: #c43333;
+$clr25: #188652;
+
+$black: #000;
+$titleGrayClr: #404145;
+$textGrayClr: #62646a;
+$borderDarkGrey: #222325;
+$reviewIconClr: #ffbe5b;
+
+// LAYOUT
+$layoutPadding: 32px;
+
+// LAYOUT BREAKPOINTS
+$break-narrow: 568px;
+$break-normal: 860px;
+$break-wide: 1128px;
+$break-widest: 1400px;
+
+$header-coursel-break-wide: 1300px;
+
+$details-break-mobile: 663px;
+$details-break-narrow: 900px;
+$details-break-normal: 1160px;
+$details-break-wide: 1455px;
+
+$payment-break-normal: 1300px; /*NEW*/
+
+$padded-break-narrow: $break-narrow + $layoutPadding * 2;
+$padded-break-normal: $break-normal + $layoutPadding * 2;
+$padded-break-wide: $break-wide + $layoutPadding * 2;
+
+$details-break-mobile: 663px;
+$details-break-narrow: 900px;
+$details-break-normal: 1160px;
+$details-break-wide: 1455px;

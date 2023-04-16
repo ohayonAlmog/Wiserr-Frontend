@@ -1,0 +1,102 @@
+// Font Sizes
+.fs10 { font-size: rem(10px); }
+.fs12 { font-size: rem(12px); }
+.fs14 { font-size: rem(14px); }
+.fs16 { font-size: rem(16px); }
+.fs18 { font-size: rem(18px); }
+.fs20 { font-size: rem(20px); }
+.fs24 { font-size: rem(24px); }
+.fs28 { font-size: rem(28px); }
+.fs30 { font-size: rem(30px); }
+
+//Line height
+.lh16-8 { line-height: rem(16.8px); }
+.lh18 { line-height: rem(18px); }
+.lh19-2 { line-height: rem(19.2px); }
+.lh20 { line-height: rem(20px); }
+.lh21 { line-height: rem(21px); }
+.lh22 { line-height: rem(22px); }
+.lh24 { line-height: rem(24px); }
+.lh28 { line-height: rem(28px); }
+.lh38 { line-height: rem(38px); }
+.lh56 { line-height: rem(56px); }
+
+//padding
+.p0 {padding: 0;}
+.p2-0-0 {padding: 2px 0 0;}
+.p0-12-5 {padding: 0 12px 5px;}
+.p10-12 {padding: 10px 12px;}
+.p9-16 {padding: 9px 16px;}
+.p12-16 {padding: 12px 16px;}
+.p12-24 {padding: 12px 24px;}
+.p5-5-5-0 {padding: 5px 5px 5px 0;}
+.p12-12-8 {padding: 12px 12px 8px;}
+.p16-24 {padding: 16px 24px;}
+.p24 {padding: 24px;}
+.p24-15 {padding: 24px 15px;}
+.p30 {padding: 30px;}
+.pie12 {padding-inline-end: 12px;}
+
+//margin
+.m0 {margin: 0;}
+.m5-0-0 {margin: 5px 0 0;}
+.m0-4-0-0 {margin: 0 4px 0 0;}
+.m8-0-0 {margin: 8px 0 0;}
+.m0-32-24 {margin: 0 32px 24px;}
+.m0-16 {margin: 0 16px;}
+
+//box-shadow
+.bs-b-0-12-18-0{box-shadow: #000000 0px 12px 18px 0px;}
+
+// title helpers
+.title {
+    color: $titleGrayClr;
+    font-family: Macan-bold;
+    font-size: 1rem;
+    line-height: em(24px, 16px);
+}
+
+.text-center {
+    text-align: center;
+}
+
+// flex helpers
+.flex {
+
+    display: flex;
+
+    > *.full {
+        flex: 1;
+    }
+    &.column {
+        flex-direction: column;
+    }
+    &.justify-center {
+        justify-content: center;
+    }
+    &.space-between {
+        justify-content: space-between;
+    }
+    &.align-center {
+        align-items: center;
+    }
+    &.transperent {
+        background-color: transparent;
+    }  
+}
+
+.clear-list {
+    margin: 0;
+    padding: 0;
+}
+
+// Media helpers
+.square-ratio {
+    @include aspect-ratio(1, 1);
+}
+.video-ratio {
+    @include aspect-ratio(16, 9);
+}
+.portrait-ratio {
+    @include aspect-ratio(9, 16);
+}

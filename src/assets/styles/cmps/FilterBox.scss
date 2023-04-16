@@ -1,0 +1,43 @@
+.filter-box {
+    position: absolute;
+    top: 100%;
+    border: 1px solid $clr8;
+    border-radius: 0.5rem;
+    margin-block-start: 1vh;
+    margin-inline-start: -1.3vw;
+    background-color: $clr6;
+    z-index: 5;
+    padding: 5px;
+    & .el-radio {
+        &:last-child {
+            margin-inline-end: 61px;
+        }
+    }
+ 
+    & .button-row {
+        border-block-start: 1px solid $clr8;
+        & button {
+            border-radius: 0.25rem;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        & .clear {
+            color: $textGrayClr;
+            background-color: transparent;
+        }
+        & .apply {
+            color: $clr6;
+            background-color: $black;
+        }
+    }
+
+  
+}
+
+// .anytime-btn{
+//     margin-inline-end: rem(59px);
+// }
+
+
+   
+

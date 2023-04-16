@@ -1,0 +1,126 @@
+.gig-preview-seller {
+    & .user-modal {
+        padding: 10px;
+        color: $textGrayClr;
+        height: 100%;
+    
+        >* {
+            :hover {
+                color: $clr4;
+                cursor: pointer;
+            }
+        }
+    
+        button {
+            display: block;
+            width: 100%;
+            background: none;
+            border: none;
+            margin-bottom: 30px;
+            border-bottom: 1px solid $clr23;
+        }
+    
+        a {
+            text-decoration: none;
+        }
+    }
+    background-color: $clr6;
+    width: 230px;
+    height: 254px;
+    border: 1px solid $clr23;
+    margin-bottom: 30px;
+
+    .gig-info {
+        background-color: $clr6;
+        height: 100%;
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: $borderDarkGrey;
+        }
+
+        &:hover {
+            a {
+                color: $clr4;
+            }
+
+            .preview-footer>.tools>span>svg {
+                visibility: visible;
+
+            }
+        }
+    }
+
+    .img-container {
+        width: 228px;
+        height: 142px;
+
+        img {
+            width: 100%;
+            height: 142px;
+        }
+    }
+
+    .preview-title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0 10px 0 10px;
+    }
+
+    .preview-footer {
+
+        p {
+            color: $clr11;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.625em 0.75em;
+
+        .tools>span>svg:hover {
+            cursor: pointer;
+        }
+
+        span>* {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+            fill: $titleGrayClr;
+            visibility: hidden;
+        }
+    }
+
+    .preview-price-container {
+        align-items: center;
+        color: $clr4;
+
+
+
+        p {
+            color: $titleGrayClr;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            color: $clr4;
+        }
+
+        .preview-price {
+            margin-inline-start: em(5px);
+            font-size: rem(18px);
+            line-height: rem(20px);
+        }
+    }
+}

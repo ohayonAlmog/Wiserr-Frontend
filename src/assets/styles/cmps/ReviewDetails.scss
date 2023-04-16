@@ -1,0 +1,323 @@
+/* reviewShort */
+.review-details-main-cont{
+    .review-details {
+        padding: 0 18px;
+        outline: none;
+        border: 1px solid $clr8;
+        border-radius: 0.25em;
+        padding: 1em 1.5em;
+        height: 135px;
+
+        .user-profile-image {
+            position: relative;
+            float: left;
+            margin: 4px 20px 0 4px;
+            width: 32px;
+            height: 32px;
+
+            img {
+                border-radius: 50%;
+                display: block;
+                height: 100%;
+                position: absolute;
+                width: 100%;
+                z-index: 1;
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            height: 105px;
+
+            .reviewer-details {
+                line-height: 23px;
+                padding-bottom: 4px;
+                flex-direction: row;
+
+                .username {
+                    font-size: 1rem;
+                    line-height: 140%;
+                    font-weight: 700;
+                    color: #404145;
+                    font-family: Macan-bold;
+                    margin: 0;
+                }
+
+                .country-container {
+                    padding: 0 0 0 12px;
+                    line-height: 23px;
+                    user-select: none;
+                    color: #62646a;
+
+                    img {
+                        height: 20px;
+                        width: 20px;
+                    }
+
+                    .country {
+                        color: #62646a;
+                        font-size: 14px;
+                        padding-left: 8px;
+                        line-height: 21px;
+                        display: block;
+                        padding-top: 2px;
+                    }
+                }
+
+                .inline-devider {
+                    color: $clr8;
+                    margin: 3px 2px 0px 6px;
+                    line-height: 23px;
+                }
+
+                .ratings {
+                    font-size: 14px;
+                    line-height: 21px;
+                    height: 22px;
+
+                    .stars {
+                        margin: 0;
+
+                        li {
+                            margin: 0;
+                            padding: 0;
+
+                            span {
+                                margin: 0;
+                                fill: $clr2;
+                                padding-left: 4px;
+                            }
+                        }
+                    }
+
+                    .rating-average {
+                        margin: 0;
+                        padding: 2px 0 0 4px;
+                        color: $clr2;
+                        font-size: 14px;
+                        line-height: 21px;
+                        font-family: Macan-bold;
+                    }
+                }
+            }
+
+            .review-description {
+                margin: 0;
+                color: #62646a;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-height: 21px;
+            }
+
+            .time-container {
+                padding-top: 4px;
+                font-size: 14px;
+                line-height: 21px;
+                color: $clr10;
+            }
+        }
+    }
+
+    /* reviewLong */
+    .review-preview-long {
+        position: static;
+        outline: none;
+        border-top: 1px solid $clr8;
+        border-radius: 0.25em;
+        padding: 40px 0 20px 0;
+        height: 130px;
+        height: fit-content;
+
+        .header {
+            width: 100%;
+            border: 0;
+            margin: 0;
+            outline: 0;
+            padding: 0;
+
+            .img-container {
+                margin-right: 16px;
+                padding: 0;
+
+                img {
+                    width: 48px;
+                    height: 48px;
+                    font-size: 1em;
+                    position: relative;
+                    border-radius: 50%;
+                }
+            }
+
+            .reviewer-details {
+                .username {
+                    font-family: Macan-bold;
+                    color: $titleGrayClr;
+                    margin: 0 0 1rem 0;
+                }
+
+                .country-wrapper {
+                    margin: 0;
+
+                    img {
+                        height: 20px;
+                        width: 20px;
+                    }
+
+                    .country {
+                        color: $textGrayClr;
+                        font-size: 14px;
+                        padding-left: 8px;
+                        padding-top: 4px;
+                    }
+                }
+            }
+        }
+
+        .review-content {
+            margin-left: 64px;
+            margin-top: 20px;
+
+            .review-rate {
+                margin-top: 20px;
+
+                .main-rating {
+                    font-size: 14px;
+                    line-height: 21px;
+                    height: 22px;
+
+                    .stars {
+                        margin: 0;
+                        padding-bottom: 4px;
+                        font-size: 14px;
+                        line-height: 21px;
+
+                        li {
+                            margin: 0;
+                            padding-right: 3px;
+
+                            span {
+                                width: 15px;
+                                height: 15px;
+                                fill: $clr2;
+                                font-size: 14px;
+                                line-height: 21px; 
+                            }
+                        }
+                    }
+
+                    .rating-score {
+                        color: $clr2;
+                        margin: 0;
+                        font-size: 14px;
+                        line-height: 21px;
+                        padding: 0 0 1px 4px;
+                        font-family: Macan-bold;
+                    }
+                }
+
+                .inline-devider {
+                    color: $clr8;
+                    margin: 3px 2px 3px 6px;
+                    line-height: 23px;
+                    padding-right: 3px;
+                }
+
+                .reviewed-at {
+                    font-size: 14px;
+                    line-height: 21px;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            .review-description {
+                margin-block-start: 7px;
+                word-wrap: break-word;
+                color: $titleGrayClr;
+                line-height: 21px;
+            }
+        }
+    }
+
+
+
+    .btn {
+        position: absolute; 
+        top: 35%;
+        text-align: center;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+        background-color: $clr6;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        z-index: 8;
+    }
+
+    .btn:hover {
+        background-color: $clr6;
+    }
+
+    .next {
+        right: -5px;
+        transform: translateX(0.6874rem);
+        display: inline-block;
+
+        svg {
+            rotate: (-90deg);
+        }
+    }
+
+    .prev {
+        left: -5px;
+        transform: translateX(-0.6874rem);
+        display: inline-block;
+
+        svg {
+            rotate: (90deg);
+        }
+    }
+}
+
+
+
+@include for-mobile-details {
+    .review-details-main-cont{
+        .review-preview-long {
+            .header {
+                padding-bottom: 10px;
+                .reviewer-details {
+                    display: grid;
+                    grid-template-columns: 25% 75%;
+                    grid-template-rows: 70% 30%;
+                    position: absolute;
+                    grid-template-areas: ". username"
+                    "country .";
+                    margin-top: 2vh;
+
+                    .username {
+                        grid-area: username;
+                        margin-left: 2vw;
+                    }
+
+                    .country-wrapper {
+                        grid-area: country;
+                        .country {
+                            overflow: visible;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+
+            .review-content {
+                margin-left: 0;
+            }
+
+            
+        }
+    }   
+}

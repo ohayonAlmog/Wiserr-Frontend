@@ -1,0 +1,480 @@
+.dashboard {
+margin-block-start:rem(60px) ;
+margin-block-end:rem(20px) ;
+
+    // margin: rem(60px) rem(40px) rem(50px);
+
+    .manage-orders-title {
+        text-align: center;
+        font-size: 2.5rem;
+        padding: 0.6em 0 0.6em 0;
+    }
+
+    .profile-progress {
+        border-radius: 5px;
+        background-color: $clr6;
+        border: 1px solid #dadbdd;
+
+        .user-desc {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-inline-start: 20px;
+        }
+
+        .profile {
+            justify-content: center;
+            margin-block-start: 20px;
+            gap: 60px;
+            margin-block-end: 15px;
+
+            .img-container {
+                width: 140px;
+                height: 140px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .user-desc {
+            flex-direction: column;
+
+            .profile-item {
+                padding: 8px;
+                color: $black;
+
+                p {
+                    margin: 0px 0px 8px 0px;
+                    text-align: center;
+                    padding-block-start: 5px;
+                }
+
+                .bold {
+                    font-family: Macan-bold;
+                    color: $black;
+                }
+
+                .regular {
+                    color: $black;
+                }
+            }
+        }
+
+        .progress {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &> :last-child {
+                margin-block-end: 30px;
+            }
+        }
+
+        .progress-item {
+            margin: 10px 0;
+            width: 80%;
+        }
+
+        .progress-txt {
+            margin-bottom: 10px;
+            justify-content: space-between;
+
+            p {
+                margin: 0px;
+                font-family: Macan-bold;
+                color: $black
+            }
+        }
+    }
+
+    .seller-orders>*:not(h1, h2) {
+        border-radius: 5px;
+        background-color: $clr6;
+        border: 1px solid #dadbdd;
+    }
+
+    .seller-orders {
+        flex-direction: column;
+        align-items: center;
+
+        .income-order-dashboard {
+            justify-content: space-evenly;
+            align-items: center;
+            height: 125px;
+
+            h3 {
+                color: $black;
+            }
+        }
+        
+        .dashboard-item {
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 152px;
+            flex: 1;
+            justify-content: space-between;
+            padding:  10px 0 10px;
+
+            span {
+                margin-block-start: 20px;
+                text-align: center;
+                font-weight: 700;
+                font-size: 1rem;
+
+                h3 {
+                    margin-block-end: 20px;
+                }
+            }
+
+            .bold {
+                font-family: Macan-bold;
+                font-size: 15px;
+                color: $black;
+            }
+        }
+    }
+
+    .order-table {
+        width: 100%;
+
+        .table-head,
+        .table-entity {
+            display: grid;
+            grid-template-columns: 0.3fr 1fr 0.3fr 0.2fr 0.5fr;
+            justify-items: center;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            border-bottom: 1px solid #dadbdd;
+
+            h4 {
+                color: $black;
+                padding-inline-start: 0px;
+            }
+
+            .order-column,
+            .total-column {
+                padding-inline-start: 0px;
+
+            }
+        }
+
+        .table-head> :last-child {
+            margin-inline-end: 15px;
+        }
+
+        .gig-column-head {
+            padding-inline-start: 0px;
+
+        }
+
+        .status-column-head {
+            position: relative;
+        }
+
+        .table-head>* {
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          
+        }
+       
+
+        .buyer-column-head{
+            margin-inline-start: rem(-4px);
+        }
+    
+
+
+
+
+       
+        //  .order-column h4 {
+        //     background: #952d2d;
+        //     margin-inline-end: rem(100px);
+        // }
+
+        .table-entity {
+            height: 100px;
+            border-bottom: 1px solid #dadbdd;
+            align-items: center;
+            width: 100%;
+
+        }
+
+        .buyer-col {
+            height: rem(50px);
+            margin-block-end: rem(20px);
+
+            img {
+                // width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            span{
+                margin-block-start: 8px;
+                font-size: rem(12px);
+        
+            }
+        }
+
+        .gig-col {
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            overflow: hidden;
+            line-height: 20px;
+            // max-width: 310px;
+
+            span {
+                font-family: Macan-Regular;
+            }
+        }
+
+        .due-on-col {
+            min-width: 50px;
+            margin-inline-start: rem(12px);
+        }
+
+        .total-col {
+            min-width: 40px;
+            margin-inline-start: 20px;
+
+        }
+    }
+}
+
+
+@include for-mobile-layout {
+
+    .dashboard {
+        .manage-orders-title {
+
+            font-size: 1.5rem;
+        }
+
+        
+        .profile-progress .user-desc .profile-item {
+
+            .bold , p.regular {
+                font-size: 14px
+                
+        }
+        }
+
+        .seller-orders .dashboard-item {
+            padding: 0 2px;
+
+            h3,
+            span.bold {
+                font-size: 13px;
+            }
+        }
+
+        .profile-progress .profile {
+
+            .img-container {
+                width: 100px;
+                height: 100px;
+            }
+
+            img {
+                margin-inline-start: 10px;
+                margin-block-start: 10px;
+
+            }
+        }
+      
+        .order-table .table-head {
+            grid-template-columns: 0.3fr 0.8fr 0.3fr 0.4fr;
+            font-size: 14px;
+            padding-inline-start: 10px;
+
+            .order-column {
+                margin-inline-end: 30px;
+            }
+
+            .total-column {
+                margin-inline-end: 39px;
+            }
+
+            .status-column {
+                margin-inline-end: 16px;
+            }
+
+            .table-head> :last-child {
+                padding-inline-start: 0px;
+            }
+
+            .table-head> :last-child {
+                margin-inline-end: 0px;
+            }
+
+        }
+
+
+        .order-table .table-entity {
+            font-size: 14px;
+
+            grid-template-columns: 0.85fr 0.8fr 0.9fr 0.3fr;
+
+            .due-on-col {
+                padding-inline-start: 10px;
+                display: none
+            }
+
+            .gig-col {
+                padding-inline-start: 10px;
+            }
+
+            .total-col {
+                min-width: 10px;
+                margin-inline-end: 5px;
+            }
+        }
+
+        .profile-progress .profile {
+            gap: 10px;
+        }
+
+        .order-table .buyer-col {
+            height: 50px;
+            margin-inline-end: 10px;
+
+            img {
+                // width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .table-head .order-column {
+            display: none
+        }
+
+        .gig-column-head {
+            margin-inline-end: 9px;
+        }
+    }
+
+    .income-order-dashboard {
+        font-size: 10px;
+
+        &>*:not(:last-child) {
+            border-right: 2px solid #dadbdd;
+        }
+    }
+
+    .order-table .table-head> :last-child {
+        margin-inline-end: 37px;
+
+    }
+    .buyer-column-head{
+        margin-inline-start: rem(20px);
+    }
+}
+
+@include for-narrow-layout {
+
+    .income-order-dashboard {
+        &>*:not(:last-child) {
+            border-right: 2px solid #dadbdd;
+        }
+    }
+
+
+    .dashboard .order-table .table-head {
+        grid-template-columns: 0.3fr 0.8fr 0.3fr 0.4fr;
+    }
+
+    .dashboard .order-table .table-entity {
+        grid-template-columns: 0.3fr 0.8fr 0.3fr 0.4fr;
+    }
+
+    .dashboard .order-table .table-head .order-column {
+        display: none
+    }
+
+    .dashboard .order-table .table-entity .due-on-col {
+        display: none
+    }
+    
+    .dashboard-item{
+                    padding: 0 10px;
+                
+    }
+
+//    .seller-orders .dashboard-item 
+//     {
+//         background-color: #672828;
+//         font-size: 13px;
+//         span.bold, h3 {
+//             font-size: 13px;
+//     }
+
+// }
+
+}
+
+@include for-normal-layout {
+    .dashboard .order-table .table-head h4 {
+        margin-inline-end: 40px;
+    }
+
+    .income-order-dashboard {
+
+        &>* {
+            border-right: 2px solid #dadbdd;
+            border-left: 2px solid #dadbdd;
+        }
+    }
+
+    .dashboard .order-table .table-head h4 {
+        margin-inline-start: 54px;
+    }
+
+
+    .dashboard .order-table .table-head {
+        grid-template-columns: 0.3fr 1fr 0.3fr 0.2fr 0.5fr;
+    }
+
+    .dashboard .order-table .table-entity {
+        grid-template-columns: 0.3fr 1fr 0.3fr 0.2fr 0.5fr;
+    }
+
+
+    .dashboard .order-table .table-head .order-column {
+        display: inline
+    }
+
+    .dashboard .order-table .table-entity .due-on-col {
+        display: inline
+    }
+
+    .dashboard .seller-orders .dashboard-item 
+    {
+        span.bold, h3 {
+            font-size: 14px;
+    }
+}
+}
+
+@include for-wide-layout {
+
+    .dashboard-item{
+        padding: 0 10px;
+
+}
+}

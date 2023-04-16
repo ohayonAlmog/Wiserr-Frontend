@@ -1,0 +1,459 @@
+.gig-preview {
+  display: flex;
+  flex-direction: column;
+  max-height: 24em;
+
+  & .vueperslides {
+
+    & .vueperslides__arrow {
+      //width: 25px;
+      //padding: 0.2em 0.1em;
+      transition: 0.2s;
+      /*& svg {
+        width: 1.6em;
+        height: 1.4em;
+        //vertical-align: middle;
+        //stroke: currentColor;
+        fill: none;
+        padding: 0.3em 0;
+        stroke-width: 2;
+        //color: transparent;
+        //margin-right: 200px;
+        translate: -30%;
+      }*/
+    }
+
+    & .vueperslides__arrow--prev { //yosef
+      width: 1.2rem;
+      height: 1.5rem;
+      border-radius: 0 50% 50% 0;
+      translate: -230%;
+      color: transparent;
+      opacity: 0;
+      //translate: -54% 0%;
+      & svg {
+        width: 1.6em;
+        height: 1.4em;
+        //vertical-align: middle;
+        //stroke: currentColor;
+        fill: none;
+        padding: 0.3em 0;
+        stroke-width: 2;
+        //margin-right: 200px;
+        translate: -45%;
+        transform: translateY(-0.6px);
+      }
+    }
+
+    & .vueperslides__arrow--next { //yosef
+      width: 1.2rem;
+      height: 1.5rem;
+      border-radius: 50% 0 0 50%;
+      //background-color: transparent;
+      
+      opacity: 0;
+      //translate: 122% 0%;
+      translate: 300%;
+      & svg {
+        width: 1.6em;
+        height: 1.4em;
+        //vertical-align: middle;
+        //stroke: currentColor;
+        fill: none;
+        padding: 0.3em 0;
+        stroke-width: 2;
+        color: transparent;
+        //margin-right: 200px;
+        translate: -30%;
+        transform: translateY(-0.7px);
+      }
+    }
+
+    &:hover .vueperslides__arrow--prev { //h
+      margin: 0 49px;
+      background-color: $clr6;
+      opacity: 1;
+      border: 1px solid rgba(126, 125, 125, 0.6);
+      
+      & svg {
+        color: rgba(99, 97, 97, 0.828);
+      }
+    }
+
+    &:hover .vueperslides__arrow--next { //h
+      margin: 0 65px;
+      background-color: $clr6;
+      opacity: 1;
+      border: 1px solid rgba(126, 125, 125, 0.6);
+  
+      & svg {
+        color: rgba(99, 97, 97, 0.828);
+      }
+    }
+
+  }
+
+
+  /*& .vueperslides__arrow { //h
+    width: 25px;
+    padding: 0.2em 0.1em;
+    transition: 0.2s;
+    & svg {
+      width: 1.6em;
+      height: 1.4em;
+      vertical-align: middle;
+      //stroke: currentColor;
+      fill: none;
+      padding: 0.3em 0;
+      stroke-width: 2;
+      color: transparent;
+    }
+  }
+
+  &:hover .vueperslides__arrow { //h
+    margin: 0 -9px;
+    background-color: $clr6;
+    opacity: 1;
+    border: 1px solid rgba(126, 125, 125, 0.6);
+
+    & svg {
+      color: rgba(99, 97, 97, 0.828);
+    }
+  }
+
+  /*.vueperslides__arrow--prev { //yosef
+    border-radius: 0 50px 50px 0;
+
+    & svg {
+      width: 1em;
+    }
+  }
+
+  .vueperslides__arrow--next { //yosef
+    border-radius: 50px 0 0 50px;
+  }
+
+  & .gig-prev-slide {
+    cursor: pointer;
+
+    & .vueperslides__arrow--prev { //yosef
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 0 50% 50% 0;
+      translate: -294% -1%;
+    }
+
+    & .vueperslides__arrow--next { //yosef
+      width: 1.2rem;
+      height: 1.5rem;
+      border-radius: 50% 0 0 50%;
+      translate: 422% 9%;
+    }
+  }*/
+
+  & .vueperslides__bullet {
+    margin-inline: 0;
+    margin-block-end: 0.6rem;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    & .default {
+      background-color: $clr6;
+      margin-inline: 0.1em;
+      scale: 0.4;
+
+      &:active {
+        scale: 1.4;
+      }
+    }
+  }
+
+  & .vueperslides__bullet--active {
+    & .default {
+      scale: 0.8;
+      margin-inline: 0.1em;
+    }
+  }
+
+  &:hover {
+    & h3 {
+      color: $clr4;
+    }
+  }
+
+  & svg {
+    fill: $clr7;
+  }
+
+  // & .vueperslides__content-wrapper {
+  //   padding: 1000px;
+  // }
+  & .gig-prev-slide {
+    transform: translate(0, -0.7%);
+
+    & .vueperslides__content-wrapper {
+      max-height: rem(194px);
+    }
+  }
+
+  & .owner-preview {
+    width: 100%;
+    gap: 0.5rem;
+
+    & .user-name-prev {
+      cursor: pointer;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    & .user-level-prev {
+      color: $clr11;
+    }
+
+    height: 3rem;
+
+    & .owner-preview-img-container {
+      width: 1.5rem;
+
+      & img {
+        border-radius: 50%;
+        width: 100%;
+      }
+    }
+  }
+
+  /*& .vueperslides__arrow {
+    width: 1.8rem;
+    height: 2rem;
+    padding: 0.2em 0.1em;
+    transition: 0.2s;
+    background-color: $clr14;
+    opacity: 1;
+    display: none;
+
+    & svg {
+      width: 1rem;
+      height: 1.4rem;
+      vertical-align: middle;
+      stroke: currentColor;
+      fill: none;
+      padding: 0.3em 0;
+      stroke-width: 2;
+      color: $black;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $clr6;
+    }
+  }*/
+
+  & {
+    h3 {
+      flex: 1;
+      font-weight: 400;
+      font-size: 1rem;
+      height: 2.68rem;
+      overflow: hidden;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  position: relative;
+  min-height: 380px;
+  border: 1px solid $clr8;
+  font-family: Macan,
+  sans-serif;
+
+  & .review-prev {
+    height: 2.5rem;
+    color: $reviewIconClr;
+
+    & span {
+      & span {
+        color: $clr7;
+
+        & svg {
+          translate: 0% 20%;
+        }
+      }
+    }
+  }
+
+  & .price-link {
+    // position: absolute;
+    font-weight: 400;
+    bottom: 0;
+    right: 0;
+    min-height: 1.5rem;
+    width: 100%;
+    border-top: 1px solid $clr8;
+    text-align: right;
+
+    & button {
+      background-color: transparent;
+
+      & a {
+        font-family: Macan, sans-serif;
+        color: $textGrayClr;
+
+        & small {
+          height: 1.125rem;
+          font-family: Macan, sans-serif;
+          color: $clr11;
+          text-transform: uppercase;
+          text-align: right;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+
+    & svg {
+      cursor: pointer;
+      translate: 0% 30%;
+    }
+  }
+
+  @include for-mobile-layout {
+    & h3 {
+      margin-block-end: -1em;
+    }
+  }
+}
+
+// .gig-preview {
+//   &:hover {
+//     color: $clr4;
+//     & .owner-preview {
+//       color: $textGrayClr;
+//     }
+//   }
+// }
+
+// .gig-preview {
+//   & .vueperslides {
+//     cursor: pointer;
+//   }
+// }
+
+// .gig-preview {
+//   & h3 {
+//     color: $textGrayClr;
+//     cursor: pointer;
+//     font-family: Macan, sans-serif;
+//     font-size: 1em;
+//     padding-inline: 0.5vw;
+//     & h3 {
+//       color: $clr4;
+//     }
+//   }
+// }
+
+// .gig-preview {
+//   & .owner-preview {
+//     padding-inline: 0.5vw;
+//   }
+// }
+
+// .gig-preview {
+
+//   & .price-link {
+//     font-family: Macan, sans-serif;
+//     position: absolute;
+//     bottom: 0;
+//     right: 0;
+
+//     }
+//   }
+// }
+
+// .gig-preview {
+//   &:hover {
+//     color: $clr4;
+//     & .owner-preview {
+//       color: $textGrayClr;
+//     }
+//     & .gig-price {
+//       color: $textGrayClr;
+//     }
+//   }
+// }
+
+// .gig-preview {
+//   & .vueperslides {
+//     cursor: pointer;
+//   }
+// }
+
+// .gig-preview {
+//   & h3 {
+//     &:hover {
+//       color: $clr4;
+//     }
+//   }
+// }
+
+// .gig-preview {
+//   & h3 {
+//     font-size: 1em;
+//     & a {
+//       font-family: Macan, sans-serif;
+//       line-height: 22px;
+//       text-decoration: none;
+//       height: 500px;
+//       &:hover {
+//         color: $clr4;
+//       }
+//     }
+//   }
+// }
+
+// .gig-preview {
+//   & h3 {
+//     & a {
+//       &:link {
+//         color: $textGrayClr;
+//       }
+//     }
+//   }
+// }
+// .gig-preview {
+//   & h3 {
+//     & a {
+//       &:active {
+//         color: $clr4;
+//       }
+//     }
+//   }
+// }
+// .gig-preview {
+//   & h3 {
+//     & a {
+//       &:visited {
+//         color: $textGrayClr;
+//       }
+//     }
+//   }
+// }
+
+// .gig-preview {
+//   & p {
+//     cursor: pointer;
+//     margin: 0;
+//   }
+// }
+
+// .gig-preview {
+//   &.gig-price {
+//     text-align: right;
+//   }
+// }

@@ -1,0 +1,51 @@
+.gig-sort {
+  margin-block-start: 1.15rem;
+  margin-block-end: 1rem;
+  & .gig-amount {
+    color: $clr11;
+    font-weight: 600;
+  }
+  & .sort-wrapper {
+    position: relative;
+    & span {
+      color: $textGrayClr;
+    }
+    & .sort-row {
+      gap: 0.5rem;
+    }
+    & .sort-input {
+      font-weight: 600;
+      &:hover {
+        cursor: pointer;
+      }
+      & .arrow-span {
+        display: inline-block;
+        margin-inline-start: 0.75rem;
+        transition: 0.5s;
+      }
+      & .arrowSpin {
+        transform: rotate(-180deg);
+        transition: 0.5s;
+      }
+    }
+    & .sort-list {
+      position: absolute;
+      z-index: 3;
+      top: 100%;
+      background-color: $clr6;
+      color: $borderDarkGrey;
+      border-radius: 0.5rem;
+      border: 1px solid $clr8;
+      font-weight: 700;
+      transform: translate(-41%);
+      min-width: 15rem;
+      & section {
+        width: 85%;
+        &:hover {
+          cursor: pointer;
+          background-color: $clr8;
+        }
+      }
+    }
+  }
+}

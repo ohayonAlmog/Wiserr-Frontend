@@ -1,0 +1,120 @@
+/* Media queries Breakpoint mixins */
+
+@mixin for-mobile-layout {
+  @media (max-width: $padded-break-narrow) {
+    @content;
+  }
+}
+
+@mixin for-narrow-layout {
+  @media (min-width: $padded-break-narrow) {
+    @content;
+  }
+}
+
+@mixin for-normal-layout {
+  @media (min-width: $padded-break-normal) {
+    @content;
+  }
+}
+
+@mixin for-wide-layout {
+  @media (min-width: $padded-break-wide) {
+    @content;
+  }
+}
+
+@mixin for-wide-layout-filter {
+  @media (max-width: ($break-widest + ($layoutPadding * 2))) {
+    @content;
+  }
+}
+
+//Header coursel
+
+@mixin for-hedear-coursel-wide-layout {
+  @media (min-width: $header-coursel-break-wide) {
+    @content;
+  }
+}
+
+
+//Details Mixins
+@mixin for-mobile-details {
+  @media (max-width: $details-break-mobile) {
+    @content;
+  }
+}
+
+@mixin for-narrow-details {
+  @media (min-width: $details-break-mobile) and (max-width: $details-break-narrow) {
+    @content;
+  }
+}
+
+@mixin for-normal-details {
+  @media (min-width: $details-break-narrow) and (max-width: $details-break-normal) {
+    @content;
+  }
+}
+
+@mixin for-wide-details {
+  @media (min-width: $details-break-normal) {
+    @content;
+  }
+}
+
+@mixin for-normal-payment { /*NEW*/
+  @media (max-width: $payment-break-normal) {
+    @content;
+  }
+}
+
+/* Media  Mixins */
+
+//aspect ratio mixin
+@mixin aspect-ratio($width: 1, $height: 1) {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: calc(($height / $width) * 100%);
+  }
+
+  >* {
+    position: absolute;
+    inset: 0;
+  }
+
+  >img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Mixin for removing hover efects on iphone screen
+@mixin hover-supported {
+  @media not all and (pointer: coarse) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin blockBtn($bgColor: gray, $color: white, $state: 'colored') {
+  display: inline-block;
+  border: 1px solid $clr1;
+  padding: 16px 32px;
+  background-color: $bgColor;
+  color: $color;
+}
+
+@mixin gtc-layout($width) {
+  grid-template-columns: 
+  minmax($layoutPadding, 1fr) 
+  minmax(auto, $width) 
+  minmax($layoutPadding, 1fr);
+}

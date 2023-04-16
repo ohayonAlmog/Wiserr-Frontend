@@ -1,0 +1,157 @@
+.gig-filter-wrapper {
+  width: 100%;
+  margin-block-start: 2vh;
+  &.fixed {
+    // width: 100vw;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    // width: $break-widest;
+    background-color: $clr6;
+    line-height: 1.5em;
+    box-shadow: $clr11 0px 0.266px 1.13052px 0px;
+    @include for-mobile-layout {
+      padding-inline: $layoutPadding;
+      // margin-block-start: 2vh;
+    }
+    @include for-narrow-layout {
+      padding-inline: calc((100vw - ($break-narrow + $layoutPadding * 2))/2);
+    }
+    @include for-normal-layout {
+      padding-inline: calc((100vw - ($break-normal + $layoutPadding * 2))/2);
+    }
+    @include for-wide-layout {
+      padding-inline: calc((100vw - ($break-widest + $layoutPadding))/2);
+    }
+    @include for-wide-layout-filter {
+      padding-inline: $layoutPadding;
+    }
+  }
+}
+
+.gig-filter {
+  // margin-block-start: 7.5vh;
+  padding-block: 1.5vh;
+  gap: rem(20px);
+  @include for-mobile-layout {
+    flex-direction: column;
+    // justify-content: flex-start;
+    gap: 1rem;
+    & section {
+      justify-content: space-between;
+    }
+    // & .btn-left {
+    //   transform: translate(-5%);
+    // }
+    & .btn-right {
+      transform: translate(-25%);
+    }
+  }
+  @include for-narrow-layout {
+    // flex-direction: column;
+    justify-content: flex-start;
+  }
+  @include for-normal-layout {
+    // flex-direction: column;
+    justify-content: flex-start;
+  }
+  @include for-wide-layout {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  & .filter-selector {
+    position: relative;
+    border: 1px solid $clr8;
+    border-radius: 0.5rem;
+    color: $borderDarkGrey;
+    font-weight: 600;
+    &:hover {
+      cursor: pointer;
+      border-color: $borderDarkGrey;
+    }
+  }
+  & section {
+    gap: 1.7vw;
+  }
+  & .arrow-span {
+    display: inline-block;
+    margin-inline-start: 0.75rem;
+    transition: 0.3s;
+    transform: translate(-25%);
+  }
+  & .arrowSpin {
+    transform: rotate(-0.499turn);
+    transition: 0.3s;
+  }
+}
+
+.switch-wrapper {
+  color: $textGrayClr;
+  font-weight: 600;
+  gap: 0.5vw;
+  /* The switch - the box around the slider */
+  & .switch {
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    height: 1rem;
+    color: $clr23;
+  }
+
+  /* Hide default HTML checkbox */
+  & .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  & .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  & .slider:before {
+    position: absolute;
+    content: '';
+    height: 0.875rem;
+    width: 0.875rem;
+    left: 0.15rem;
+    bottom: 1px;
+    background-color: $clr6;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  & input:checked + .slider {
+    background-color: $clr4;
+  }
+
+  & input:focus + .slider {
+    box-shadow: 0 0 1px $clr4;
+  }
+
+  & input:checked + .slider:before {
+    -webkit-transform: translateX(0.8rem);
+    -ms-transform: translateX(0.8rem);
+    transform: translateX(0.8rem);
+  }
+
+  /* Rounded sliders */
+  & .slider.round {
+    border-radius: 34px;
+  }
+
+  & .slider.round:before {
+    border-radius: 50%;
+  }
+}

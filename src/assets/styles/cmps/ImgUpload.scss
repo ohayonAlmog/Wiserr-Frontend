@@ -1,0 +1,46 @@
+.img-upload-container {
+
+    .vueperslides {
+        width: 100%;
+        margin-top: 45px;
+    }
+
+    .vueperslides__bullet:hover {
+        background-color: transparent;
+    }
+
+    .upload-label {
+        display: block;
+        background: grey;
+        color: white;
+        font-family: Macan-Regular;
+        width: 140px;
+        height: 50px;
+        padding: 10px;
+        transform: translate(0px, 100%);
+        border-radius: 4px;
+        font-size: 0.9rem;
+        line-height: 30px;
+        cursor: pointer;
+    }
+
+    .upload-input {
+        position: relative;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        cursor: pointer;
+        margin: 0;
+    }
+
+    .gig-images {
+        gap: 10px;
+        height: fit-content;
+
+        img {
+            width: 167.5px;
+            height: 167.5px;
+        }
+    }
+
+}

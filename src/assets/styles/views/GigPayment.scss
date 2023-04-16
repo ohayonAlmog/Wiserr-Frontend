@@ -1,0 +1,376 @@
+.gig-payment-main {
+  //display: flex;
+  display: grid;
+  //margin: 0 32px 32px 32px;
+  //justify-content: center;
+  min-height: 100vh;
+  
+
+    .payment-container {
+        //flex-wrap: wrap;
+        //padding-top: 20px;
+        display: flex;
+        //margin: 32px;
+        justify-content: space-between;
+
+        .flex-cont {
+            flex-wrap: wrap;
+            margin-top: 50px;
+
+            /*Right Section*/
+            .payment-details-container {
+                flex:1.5;
+                //flex-wrap: wrap;
+                min-width: 260px;
+                border: 1px solid $clr8;
+                border-radius: em(3px, 16px);
+                padding: em(24px, 16px);
+                margin-block-end: 64px;
+                background-color: $clr14;
+                color: $clr11;
+                margin-inline-end: 2.5vw;
+                //width: 665px;
+                //height: 799px;
+                //width: 50%;
+
+                h2 {
+                    color: $clr11;
+                }
+
+                .credit-selection {
+                    background-color: $clr6;
+                    height: 50px;
+                    margin: 0px -24px;
+                    padding-inline-start: 24px;
+
+                    .credit-txt {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .visa {
+                        width: 100px;
+                        height: 50px;
+                    
+                        svg {
+                        width: 100%;
+                        height: 100%;
+                        }
+                    }
+                }
+
+                .payment-option {
+
+                    input {
+                        height: 40px;
+                        border-radius: 3px;
+                        border:1px solid $clr8;
+                        padding-inline-start: 15px;
+                        font-size: 18px;
+                        color: $textGrayClr;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        margin-bottom: 15px;
+                        margin-top: 40px;
+                        font-weight: 700;
+                        color: $clr11;
+                    }
+
+                    .card-info {
+                        flex-wrap: wrap;
+
+                        .card-num-container {
+
+                            .card-num {
+                                display: flex;
+                                margin-inline-end: 50px;
+                                min-width: 12vw;
+                                flex: 1;
+                            }
+                        }
+
+                        .shorts-input {
+                            display: flex;
+                
+                            .short {
+                                max-width: 110px;
+                                margin-inline-end: 20px;
+                            }
+                        }
+                    }
+
+                    .name-inputs {
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                
+                        .name-input {
+                            min-width: 10vw;
+                            margin-inline-end: 50px;
+                        }
+                    }
+                }
+            }
+            
+            /*left Section*/
+            .gig-payment {
+                /*position: sticky;
+                width: 444px;
+                height: 672px;
+                top: 53px;
+                align-self: flex-start;*/
+                min-width: 260px;
+                flex: 1;
+                //width: 35%;
+                background-color: $clr6;
+                position: sticky;
+                align-self: flex-start;
+                top: 53px;
+                overflow-y: auto;
+
+                p {
+                    font-size: rem(16px);
+                    min-height: 45px;
+                    margin-block-end: 10px;
+                    line-height: 120%;
+                    font-weight: 500;
+                }
+
+                button {
+                    border: 1px solid transparent;
+                    border-radius: em(4px, 16px);
+                    font-size: 1rem;
+                    font-weight: 600;
+                    font-family: inherit;
+                    line-height: 100%;
+                    padding: em(12px, 16px) em(24px, 16px);
+                    position: relative;
+                    text-align: center;
+                    width: 100%;
+                    transition: 70ms cubic-bezier(0.75, 0, 0.25, 1);
+                    cursor: pointer;
+                }
+
+                .gig-payment-content {
+                    border-radius: 3px;
+                    padding: em(32px, 16px) em(24px, 16px);
+                    border: 1px solid $clr8;
+                    margin-block-end: 0.4vw;
+                
+                    & > p {
+                        font-family: Macan-Regular;
+                        font-size: rem(14px);
+                        line-height: 140%;
+                        font-weight: 500;
+                        color: $textGrayClr;
+                        margin: 0;
+                    }
+
+                    .gig-payment-header {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-block-end: 18px;
+                        min-height: 48px;
+
+                        .gig-payment-img {
+                            height: 70px;
+                            width: 100px;
+                            margin-inline-end: 10px;
+                            margin-block-start: 20px;
+                        }
+
+                        .gig-payment-title {
+                            font-family: Macan-Regular;
+                            font-size: 1rem;
+                            line-height: em(24px, 16px);
+                            color: $titleGrayClr;
+                            flex: 1;
+                        }
+                    }
+
+                    .gig-payment-price {
+                        font-family: Macan-bold;
+                        font-size: rem(20px);
+                        line-height: em(24px, 16px);
+                        font-weight: 400;
+                        color: $titleGrayClr;
+                        margin-bottom: 0;
+                    }
+
+                    .gig-payment-features {
+                        margin-block-end: 20px;
+                        padding: 0;
+                    
+                        & > li {
+                        display: flex;
+                        font-family: Macan-Regular;
+                        align-items: center;
+                        font-size: rem(14px);
+                        color: $clr10;
+                        line-height: em(24px, 14px);
+                        padding: 0;
+
+                        span {
+                            padding-right: 10px;
+                            padding-top: 6px;
+                        }
+
+                        }
+                    }
+
+                    .gig-payment-price-calc {
+                        display: flex;
+                        justify-content: space-between;
+                        color: $textGrayClr;
+
+                        p {
+                            margin-top: 0;
+                        }
+                
+                        .gig-payment-bold {
+                        font: bold;
+                        font-family: Macan-bold;
+                        }
+                    }
+
+                    .gig-payment-continue-btn {
+                        background-color: $black;
+                        color: $clr6;
+                
+                        &:hover {
+                        background-color: $clr4;
+                        }
+                    }
+
+                    .total {
+                        border-top: 2px solid $clr8;
+                        padding-top: 15px;
+                        color: $titleGrayClr;
+
+                        p {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }    
+        }
+    }
+}
+
+/*@include for-normal-payment {
+    .gig-payment-main {
+        margin-block-start: -10.23vh;
+    }
+}*/
+
+/*@include for-mobile-details {
+
+    .gig-payment-main {
+        margin: 0;
+
+        input {
+            margin: 0;
+        }
+
+        .card-info {
+            margin: 0;
+        }
+    }
+    .payment-details-container {
+        width: 50px;
+        margin-top: 30px;
+        height: fit-content;
+    }
+}*/
+
+/*@media (max-width: 877px) {
+    .payment-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 60%;
+    }
+
+    .payment-details-container {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .payment-details-container {
+        //margin-top: 90px;
+        height: fit-content;
+    }
+
+    .payment-option {
+        width: 10vw;
+    }
+
+    .payment-container {
+        justify-content: left;
+    }
+
+    .gig-payment-main {
+        margin: 0;
+    }
+
+    .gig-payment-content {
+        width: 60%;
+    }
+}*/
+
+@include for-mobile-details {
+    .flex-cont {
+        padding-top: -90px;
+    }
+
+    .flex-cont {
+        padding-top: -90px;
+    }
+
+    .payment-container {
+        margin: 0;
+    }
+    .payment-details-container {
+        min-width: 260px;
+        margin-top: -20px;
+        //margin: 30px 25px 0 25px;
+        width:100px;
+        //margin-left: 10px;
+
+        h2 {
+            padding-bottom: 10px;
+        }
+    }
+
+    .flex-cont {
+        align-content: center;
+    }
+
+    .gig-payment-content {
+        min-width: 260px;
+        width: 97%;
+        //margin-left: 10px;
+    }
+
+    .gig-payment-header {
+        width: 230px;
+        margin: 0;
+
+        p {
+            width: 230px; 
+        }
+    }
+    
+}
+
+@media (max-width:1300px) and (min-width:601px) {
+
+    .flex-cont {
+        padding-top: 90px;
+    }
+
+    .payment-container {
+        margin-top: -100px;
+    } 
+}

@@ -1,0 +1,132 @@
+.app-footer {
+    height: rem(80px);
+    border-top: 1px solid $clr8;
+   .content-container{
+    margin-block-start: rem(20px);
+// position: absolute;
+// bottom: 0;
+// transform: translateX(50%);
+
+   }
+ .logo-footer {
+    position: relative;
+    font-family: Macan-Regular Arial, Helvetica, sans-serif;
+    letter-spacing: rem(0.2px);
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-block-end: rem(20px);
+    color: $clr12;
+    &:after {
+        content: "\ae";
+        font-size: .6rem;
+        color: $textGrayClr;
+    }
+    
+}
+small {
+    font-size: .875rem;
+    margin-inline-start: 1.71em;
+    color: $clr7;  
+    width:rem(220px)
+}
+
+.social-links {
+    gap: 2em;
+    & svg {
+        fill: $textGrayClr;
+}
+a {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}  
+a:hover{
+background-color: $clr18;
+
+}
+
+}
+}
+
+
+@include for-mobile-layout {
+    
+   
+
+    .content-container{
+        flex-direction: column;
+        align-items: center;
+    }
+        .logo-footer{
+            margin-block-start: rem(16px);
+            margin-block-end: rem(16px);
+        }
+
+        .logo-footer-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-block-end: rem(16px);
+        }
+
+        .social-links{
+            margin-block-start: 0rem;
+            margin-inline-start: rem(14px);
+            gap: rem(28px);
+            margin-block-end: rem(24px);
+
+        
+        
+    }
+}
+
+@include for-narrow-layout {
+    .content-container{
+        flex-direction: column;
+        align-items: center;
+        margin-block-end: rem(6px);
+    }
+    .logo-footer{
+        margin-block-start: rem(16px);
+        margin-block-end: rem(16px);
+    }
+
+        .logo-footer-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-block-end: rem(16px);
+        }
+
+        .social-links{
+            margin-block-start: 0rem;
+            margin-inline-start: rem(14px);
+            gap: rem(28px);
+            margin-block-end: rem(24px);
+
+    }
+    }
+
+@include for-normal-layout {
+}
+
+@include for-wide-layout {
+    .content-container{
+        flex-direction: row;
+    }
+    .logo-footer{
+        margin-block-end: rem(0px);
+    }
+
+    .logo-footer-container{
+        display: inline;
+       
+    }
+    .social-links{
+        margin-block-end: rem(0px);
+}
+    
+}
